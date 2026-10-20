@@ -87,6 +87,8 @@ export default function LoginPage() {
         setError(data.error || 'Your account has been created and is awaiting administrator approval.')
       } else if (data?.code === 'user_inactive') {
         setError(data.error || 'Your account has been deactivated or disabled. Please contact an administrator.')
+      } else if (!err.response) {
+        setError('Cannot connect to backend server. Please verify VITE_API_BASE_URL or wait for backend to finish starting.')
       } else {
         setError(data?.error || data?.email?.[0] || 'Invalid email or password.')
       }
