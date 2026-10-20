@@ -166,11 +166,21 @@ USE_I18N = True
 USE_TZ = True
 
 
-CORS_ALLOWED_ORIGINS = [origin.strip() for origin in os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173').split(',') if origin.strip()]
+def _normalize_origin(origin: str) -> str:
+    origin = origin.strip().rstrip('/')
+    if not origin:
+        return ''
+    if not origin.startswith(('http://', 'https://')):
+        origin = f'https://{origin}'
+    return origin
+
+_cors_raw = os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173')
+CORS_ALLOWED_ORIGINS = [_normalize_origin(o) for o in _cors_raw.split(',') if _normalize_origin(o)]
 CORS_ALLOW_ALL_ORIGINS = os.environ.get('CORS_ALLOW_ALL_ORIGINS', 'False').lower() in ('true', '1', 'yes')
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in os.environ.get('CSRF_TRUSTED_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173').split(',') if origin.strip()]
+_csrf_raw = os.environ.get('CSRF_TRUSTED_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173')
+CSRF_TRUSTED_ORIGINS = [_normalize_origin(o) for o in _csrf_raw.split(',') if _normalize_origin(o)]
 
 # Security headers & cookies
 SESSION_COOKIE_SECURE = os.environ.get('SESSION_COOKIE_SECURE', 'False').lower() in ('true', '1', 'yes')
