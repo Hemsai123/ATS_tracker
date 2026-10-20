@@ -14,10 +14,6 @@ A modern, high-performance Applicant Tracking System (ATS) engineered to streaml
 ## 🌐 Live Application
 
 - **Production App**: [https://ats-tracker-alpha.vercel.app](https://ats-tracker-alpha.vercel.app)
-
-### 🎬 Video Walkthrough
-- **Demo Video**: [Watch Demo Video Walkthrough](https://loom.com) *(Add your Loom or YouTube link here)*
-
 ---
 
 ## ✨ Key Features
