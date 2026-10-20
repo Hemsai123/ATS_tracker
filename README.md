@@ -1,7 +1,6 @@
 # 🚀 EarlyJobs.ai — Enterprise Applicant Tracking System (ATS)
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://ats-tracker-alpha.vercel.app)
-[![API Backend](https://img.shields.io/badge/Backend%20API-Render-46E3B7?style=for-the-badge&logo=render)](https://ats-tracker-backend-slh2.onrender.com/api/health/)
 [![Django](https://img.shields.io/badge/Django-5.2-092E20?style=for-the-badge&logo=django)](https://www.djangoproject.com/)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
@@ -12,23 +11,12 @@ A modern, high-performance Applicant Tracking System (ATS) engineered to streaml
 
 ---
 
-## 🌐 Live Deployments & Demo
+## 🌐 Live Application
 
-| Service | Environment | Live URL |
-| :--- | :--- | :--- |
-| **Frontend Web App** | Vercel (Production) | [https://ats-tracker-alpha.vercel.app](https://ats-tracker-alpha.vercel.app) |
-| **Backend REST API** | Render (Production) | [https://ats-tracker-backend-slh2.onrender.com](https://ats-tracker-backend-slh2.onrender.com) |
-| **API Health Status** | Public Check | [Check API Status](https://ats-tracker-backend-slh2.onrender.com/api/health/) |
+- **Production App**: [https://ats-tracker-alpha.vercel.app](https://ats-tracker-alpha.vercel.app)
 
 ### 🎬 Video Walkthrough
 - **Demo Video**: [Watch Demo Video Walkthrough](https://loom.com) *(Add your Loom or YouTube link here)*
-
-### 🔑 Demo Evaluation Credentials
-
-| Role | Email | Password | Access Level |
-| :--- | :--- | :--- | :--- |
-| **Recruiter** | `hemsai@earlyjobs.in` | `Password123!` | Personal Recruiter Dashboard, Candidate Roster, Kanban Pipeline |
-| **Administrator** | `admin@earlyjobs.in` | `Admin1234!` | Platform-wide Overview, Recruiter Approval, Team Governance |
 
 ---
 
@@ -207,7 +195,7 @@ OK (All unit, permission, and isolation tests passing)
 - **Build Command**: `npm run build`
 - **Output Directory**: `dist`
 - **Environment Variables**:
-  - `VITE_API_BASE_URL`: `https://ats-tracker-backend-slh2.onrender.com/api`
+  - `VITE_API_BASE_URL`: `https://<your-backend-api-url>/api`
 
 ---
 
